@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfólio Nome Aluno</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  
+  <body>
+
+    <!-- sidebar -->
+    <aside id="sidebar" class="d-flex flex-column align-itens-center p-3">
+      <!-- toglle button for mobile-->
+      <buttun id="sidebarToggle" class="btn btn-outline-light d-md-none">
+        <i class="bi bi-list"> </i>
+      </buttun>
+      <div class=" profile-img mb-3">
+        <img src="img/praia.jfif" alt="joão vitor" class="rounded-circle">
+      </div>
+      <h3>joão vitor</h3>
+
+      <div class=" social-links mb-4 d-flex gap-3">
+        <a href="#" title="twitter" class="text-white"> <i class="bi bi-twitter"> </i> </a>
+        <a href="#" title="facebook" class="text-white"><i class="bi bi-facebook"></i> </a>
+        <a href="#" title="instagram" class="text-white"><i class="bi bi-instagram"></i> </a>
+        <a href="#" title="skype" class="text-white"><i class="bi bi-skype"></i> </a>
+        <a href="#" title="linkedin" class="text-white"><i class="bi bi-linkedin"></i> </a>
+      </div> 
+      
+      <nav class="nav flex-column w-100">
+        <a class="nav-link active" href="#home"><i class="bi bi-house-door"></i>home</a>
+        <a class="nav-link" href="#about"><i class="bi bi-person"></i> about</a>
+        <a class="nav-link" href="#resume"><i class="bi bi-file-earmark-text"></i>portfolio</a>
+        <a class="nav-link" href="#services"><i class="bi bi-card-list"></i>services</a>
+        <a class="nav-link" href="#contact"><i class="bi bi-envelope"></i>contato</a>
+      </nav>  
+    </aside>
+    
+    <!--main content-->
+    <main id="main-content">
+
+      <!--home section-->
+      <section id="home">
+        <div class="home-text text-center">
+            <h1 class="fw-bold">joão vitor</h1>
+            <h4>i'm<span id="typing"></span></h4>
+        </div>
+      </section>
+
+
+
+      <!-- other sections -->
+      <section id="about" class="py-s fade-in">
+        
+        <div class="container">
+          <h2 class="mb-5">about me</h2>
+          <div class="row align-itens-center">
+            <div class="col-md-4 text-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt7gQwAgoFs6KUnWSf5hhlMxuk-E7QBAuHtA&s" class="img-fluid rounded-circle shadow"width="200">
+              
+            </div>
+            
+            <div class="col-md-8">
+              <h4 class="fw-bold">desenvolvedor fullstack</h4>
+              <p>
+                desenvolvo aplicações modernas com foco em perfomance, escalabilidade e integração com APIs.
+                tenho experiencia prática com javaScript, node.js e bancos de dados, criando soluções completas.
+              </p>
+              
+              <!-- skills -->
+              <div class="mt-4">
+                
+                <label>javaScript</label>
+                
+                <div class="progress mb-3">
+
+                  <div class="progress-bar bg-primary" style="width: 85%">
+                  </div>
+                  
+                </div>
+                
+                <label>node.js</label>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-sucess" style="width:75%"></div>
+                </div>
+                
+                <label>SQL</label>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-warning" style="width:70%"></div>
+                </div>
+                
+              </div>  
+            
+            </div>
+            
+          </div>
+        </div>
+      </section>      
+
+
+
+      <section id="resume" class="py-5 bg-light fade-in">
+        <div class="container">
+          <h2 class="mb-5">resume</h2>
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h5>desenvolvedor freelancer</h5>
+              <span>2023 - Atual</span>
+              <p>criação de sistemas web, APIs e landing pages.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <h5>projetos fullstack</h5>
+              <span>2022 - tual</span>
+              <p>Apps com autenticação, integração REST e banco
+                de ados.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <h5>curso desenvolvimento web</h5>
+              <span>2022 - 2024</span>
+              <p>foco em js, node, SQL e arquitetura web.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>      
+
+
+      <section id="portfolio" class="py-5 fade-in">
+        <div class="container">
+          <h2 class="mb-4">portfolio</h2>
+
+          <!-- filtro -->
+          <div class="text-center mb-4">
+
+            <button class="btn btn-outline-primary filter-btn active" data-filter="all">
+              todos
+            </button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="web">
+              web
+            </button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="app">
+              apps
+            </button>
+            
+          </div>
+          
+          <div class="row g-4 portfolio-container">
+
+            <div class="col-md-4 portfolio-item" data-category="web">
+              <div class="card portfolio-card">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg" class="card-img-top">
+                <div class="overlay">
+                  <h5>dashboard</h5>
+                  <p>API + gráficos</p>
+                </div>  
+              </div>  
+            </div>
+            
+            <div class="col-md-4 portfolio-item" data-category="app">
+              <div class="card portfolio-card">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20240517/pngtree-nature-beautiful-background-image-image_15794823.jpg" class="card-img-top">
+                <div class="overlay">
+                  <h5>Login system</h5>
+                  <p>JWT Auth</p>
+                </div>  
+              </div>  
+            </div>
+            
+            <div class="col-md-4 portfolio-item" data-category="web">
+              <div class="card portfolio-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl1ASPkRZmfx8Hn7WFz_o_s_qwnF0FYOifsw&s" class="card-img-top">
+                <div class="overlay">
+                  <h5>landing page</h5>
+                  <p>UI moderno</p>
+                </div>  
+              </div>  
+            </div>
+            
+          </div>  
+        </div>  
+      </section> 
+
+      <section id="services" class="py-5 bg-light fade-in">
+        <div class="container">
+          <h2 class="mb-5">Services</h2>
+
+          <div class="row g-4">
+            
+            <div class="col-md-4">
+              <div class="service-card text-center p-4 shadow-sm">
+                <i class="bi bi-code-slash fs-1 text-primary"></i>
+                <h5 class="mt-3">Web Development</h5>
+                <p>Criacão de sistemas e sites modernos.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="service-card text-center p-4 shadow-sm">
+                <i class="bi bi-phone fs-1 text-primary"></i>
+                <h5 class="mt-3">Responsividade</h5>
+                <p>Layouts adaptaveis para qualquer dispositivo.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="service-card text-center p-4 shadow-sm">
+                <i class="bi bi-lightbulb fs-1 text-primary"></i>
+                <h5 class="mt-3">UI/UX</h5>
+                <p>experiencia de usuario moderna e eficiente.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>    
+      </section>    
+        
+      <section id="contact" class="py-5 fade-in">
+        <div class="container">
+          <h2 class="mb-5 text-center">contato</h2>
+
+          <div class= "row g-4" align-items-stretch">
+
+            <!-- INFO -->
+            <div class="col-md-5">
+                <div class="contact-box p-4 shadow rounded h-100 bg-dark
+                      text-light">
+                  <h4 class="mb-4">Informações</h4>
+
+                  <p>
+                    <i class="bi bi-envelope-fill text-primary"></i>
+                    santosjoaovitordossantos23@gmail.com
+                  </p>
+              
+                  <p>
+                    <i class="bi bi-phone-fill text-primary"></i>
+                    (31) 99872-3722
+                  </p>
+
+                  <p>
+                    <i class="bi bi-geo-alt-fill text-primary"></i>
+                    Ribeirão das Neves
+                  </p>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div class="col-md-7">
+              <div class="p-4 shadow rounded bg-white">
+
+                <!-- Progress -->
+                <div class="progress mb-4" style="height: 8px;">
+                  <div
+                    id="formProgress"
+                    class="progress-bar progress-bar-striped progress-bar-animated"
+                    style="width: 0%">
+                  </div>                  
+                </div>
+            
+                <form id="contactForm" novalidade>
+
+                  <div class="mb-3">
+
+                    <label class="form-label">Seu nome</label>
+                    <input type="text" id="name" class="form-control"
+                      placeholder="Digite seu nome">
+
+                    <div class="invalid-feedback">
+                      <joaovito21>
+                    </div>  
+                  </div>
+
+                  <div class="mb-3">
+
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Digite seu email">
+                    <div class="invalid-feedback">
+                      Informe um email valido.
+                    </div>   
+                  </input> 
+                
+                  <div class="mb-3">
+                    <label class="form-label">Mensagem</label>
+                    <textarea
+                      id="message"
+                      rows="5"
+                      class="form-control"
+                      placeholder="Digite sua mensagem"></textarea>
+                    <div class="invalid-feedback">
+                      A mensagem deve ter pelo menos 10 caracteres.
+                    </div>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    id="submitBtn"
+                    class="btn btn-primary w-100">
+
+                    <span class="btn-text">
+                      Enviar mensagem
+                    </span>
+                    
+                    <span
+                      class="spinner-border spinner-border-sm d-none"
+                      id="loader">
+                    </span>
+                    
+                  </button>
+                  
+                  <!-- ALERT -->
+                  <div
+                    id="formAlert"  
+                    class="alert alert-success alert-dismissible fade show mt-4 d-none" 
+                    role="alert">
+
+                    <span id="alertMessage"></span>
+
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="alert"
+                      aria-label="close">
+                    </button>
+
+                  </div>  
+
+                </form>
+                
+              </div>
+            </div>
+
+          </div> 
+
+        </div>        
+      </section>    
+      
+      
+
+    </main>            
+      
+
+    <!-- JS -->
+    <script src="bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+
+</html>
+

@@ -1,0 +1,296 @@
+/* global */
+boby, html{
+    height:100%;
+    margin:0;
+    font-family:'segolvi',tahoma,Geneva,verdana,sans-serif;
+    background:#f8f9fa;
+}
+
+
+
+/* SIDEBAR */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color:#121d33;
+    color:white;
+    overflow-y: auto;
+    text-align: center;
+    padding-top: 1rem;
+    transition: transform 0.35 lase;
+    z-index:1000;
+}
+ 
+/*toggle hidden sidebar*/
+#sidebar .hidden{
+    transform: translateX(-100% );    
+}
+
+
+/*profile*/
+#sidebar .profile-img img{
+    width:200px;
+    height:120px;
+    border:4px solid #1a254f;
+    object-fit:cover;
+}
+
+/*links*/
+#sidebar nav a.nav-link {
+    color:#cfd8dc;
+    font-weight:500;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#sidebar nav a.nav-link:hover,
+#sidebar nav a.nav-link.active{
+    color:#0d6efd;
+    background-color:#1a254f;
+    border-left-color:#0d6efd;
+}
+
+#sidebar nav a.nav-link i{
+    margin-right:10px;
+}
+
+/* main content */
+#main-content{
+    margin-left:240px;
+    transition: margin-left 0.3s ease;
+}   
+
+/*home section*/
+#home {
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    color:white;
+    padding:0 2rem;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIr5FjxaJQy6RTw6kQkJJcIYoRQRu6xhlrEw&s) no-repeat center center;
+    background-size: cover;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index:1;
+}
+  
+#home .home-text {
+    position: relative;
+    z-index:2;
+    max-width: 600px;
+}
+    
+.home-text h1 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.home-text h4 {
+    margin: 5px 0 0 0;
+    font-size: 26px;
+}
+
+
+#home #typing{
+    border-bottom:2px solid #0d6efd;
+    white-space:nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#home #typing::after{
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%,50%,100%{opacity:1;}
+    25%,75% {opacity:0;}
+    
+}
+
+
+
+
+
+
+
+
+
+
+.timeline {
+    border-left: 3px solid #0d6efd;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: #0d6efd;
+    border-radius:  50%;
+}
+
+
+
+
+
+
+
+
+/* ==== portfolio Hower ===== */
+.portfolio-item {
+    height: 400px;
+}
+
+.portfolio-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+    border-radius: 12px;
+}
+
+.portfolio-card img {
+     width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 110, 253, 0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.portfolio-card:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== fade Animation ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translaY(0);
+}
+
+/* ===== Services Hover ===== */
+#services .col-md-4 {
+    transition: 0.3s;
+}
+
+#services .col-md-4:hover {
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+
+/* ===== Buttons ===== */
+.filter-btn.active {
+    background-color: #0d6efd;
+    color: white
+}
+
+
+
+
+
+
+
+
+/* feito */
+.timeline {
+    border-left: 3px solod #9dc3fb;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background:#0d6efd;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+.service-card {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: #0d6efd;
+    color: white;
+}
